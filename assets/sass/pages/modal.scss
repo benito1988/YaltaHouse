@@ -1,0 +1,158 @@
+.modal-window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    padding: 0;
+    height: 0vh;
+    overflow: hidden;
+    background-color: rgba(255,255,255,0.8);
+    opacity: 0;
+    transition: opacity 0.2s;
+
+    &.show {
+        padding: 20px;
+        height: 100vh;
+        overflow: auto;
+        opacity: 1;
+    }
+}
+
+.modal-card {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: $shadow;
+    transition: transform 0.4s;
+    transform: translateY(-200px);
+    
+    .show & {
+        transform: translateY(0px);
+    } 
+}
+
+.room-order {
+    padding: 30px 60px;
+    border-top: 1px solid $light-gray
+}
+
+
+.room-description {
+    padding: 30px 60px;
+}
+
+.room-settings {
+    padding: 30px 60px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.service-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 10px 0;
+    border-top: 1px solid $light-gray;
+    
+    &:last-child {
+        border-bottom: 1px solid $light-gray;
+    }
+
+    .icon {
+        margin-right: 10px;
+    }
+}
+
+.input-wrapper {
+    margin: 0 20px 20px 0;
+}
+
+.input-title {
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.feald {
+    padding: 10px 10px 10px 50px;
+    border: 1px solid $light-gray;
+    font-size: 14px;
+    overflow: visible;
+    display: inline-block;
+    // position: relative;
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 10px;
+        height: 10px;
+        background-color: red;
+        font-size: 20px;
+        z-index: 999;
+    }
+}
+
+
+.description-left-side {
+    flex: 0 1 45%;
+    margin-right: 30px;
+
+    .title {
+        margin-bottom: 10px;
+    }
+
+    .text {
+        margin-bottom: 10px;
+    }
+}
+
+.room-description {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.price-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+
+    .final-price {
+        border-right: 1px solid $light-gray;
+        padding-right: 10px;
+        text-align: left;
+    }
+
+    .small-title {
+        font-weight: 400;
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    .days {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .price {
+        padding: 0 10px;
+        font-weight: 600;
+        color: red;
+        font-size: 34px;
+    }
+}
