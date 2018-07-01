@@ -168,7 +168,7 @@ body { margin: 0; padding: 0; }
 
 @media all and (min-width: 767px) { .contact-us .map-container { position: absolute; height: auto; top: 0; left: 0; right: 0; bottom: 0; } }
 
-.footer { padding-top: 40px; padding-bottom: 100px; }
+.footer { padding-top: 40px; padding-bottom: 100px; background: url(../image/footer-image.jpg) no-repeat center bottom; background-size: cover; }
 
 .footer-top { margin-bottom: 200px; }
 
@@ -285,3 +285,13 @@ body { margin: 0; padding: 0; }
 .price-container .days { font-size: 14px; font-weight: 600; }
 
 .price-container .price { padding: 0 10px; font-weight: 600; color: red; font-size: 34px; }
+
+i[class^="i-"] { width: 44px; height: 44px; display: inline-block; }
+
+.i-marker-blue { background: url(../img/markerBlue.svg) no-repeat center; background-size: contain; }
+
+.i-map-marker-blue { background: url(../img/mapMark.svg) no-repeat center; background-size: contain; }
+
+.i-phone-blue { background: url(../img/phoneBlue.svg) no-repeat center; background-size: contain; }
+
+.i-mail-blue { background: url(../img/mailBlue.svg) no-repeat center; background-size: contain; }
