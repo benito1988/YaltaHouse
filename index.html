@@ -4,7 +4,11 @@
     <meta charset="utf-8">
     <title>Yalat House</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	
+	<!-- fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
 </head>
 <body>
 <div class="menu"></div>
@@ -76,8 +80,8 @@
 		</div>
 	</div>
 </div>
-
-<header class="header fixed">
+<!-- fixed -->
+<header class="header" id="header">
 	<!-- nav-show -->
 	<div class="header-navigation nav-show">
 		<div class="container">
@@ -97,12 +101,12 @@
 			</div>
 			<nav class="nav">
 				<ul class="nav-wrapper">
-					<li class="nav-item"><a href="#" class="nav-link">Главная</a></li>
-					<li class="nav-item"><a href="#" class="nav-link">Номера</a></li>
-					<li class="nav-item"><a href="#" class="nav-link">Удобства</a></li>
-					<li class="nav-item"><a href="#" class="nav-link">О нас</a></li>
-					<li class="nav-item"><a href="#" class="nav-link">Ориентиры</a></li>
-					<li class="nav-item"><a href="#" class="nav-link">Контакты</a></li>
+					<li class="nav-item"><a href="#header" class="nav-link">Главная</a></li>
+					<li class="nav-item"><a href="#rooms" class="nav-link">Номера</a></li>
+					<li class="nav-item"><a href="#convenience" class="nav-link">Удобства</a></li>
+					<li class="nav-item"><a href="#about-us" class="nav-link">О нас</a></li>
+					<li class="nav-item"><a href="#nearby" class="nav-link">Ориентиры</a></li>
+					<li class="nav-item"><a href="#contact-us" class="nav-link">Контакты</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -117,9 +121,10 @@
 </header>
 
 <main class="main">
+	<span id="rooms"></span>
 	<div class="rooms">
 		<div class="container">
-			<h2 class="title-section">Комнаты</h2>
+			<h2 class="title-section">Номера</h2>
 			<div class="row">
 				<div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
 					<div class="room-card">
@@ -162,6 +167,7 @@
 		</div>
 	</div>
 
+	<span id="convenience"></span>
 	<div class="convenience">
 		<div class="container">
 			<h2 class="title-section">Удобства</h2>
@@ -214,6 +220,7 @@
 		</div>
 	</div>
 
+	<span id="about-us"></span>
 	<div class="about-us">
 		<div class="container">
 			<div class="card-section">
@@ -255,9 +262,10 @@
 		</div>
 	</div>
 
+	<span id="nearby"></span>
 	<div class="nearby">
 		<div class="container">
-			<h2 class="title-section">Удобства</h2>
+			<h2 class="title-section">Ориентиры поблизости</h2>
 			<div class="row">
 				<div class="col-sm-12 col-md-4">
 					<span class="icon">icon</span>
@@ -294,6 +302,7 @@
 		</div>
 	</div>
 
+	<span id="contact-us"></span>
 	<div class="contact-us">
 		<div class="container">
 			<div class="card-contacts">
@@ -352,5 +361,11 @@
 		</div>
 </footer>
 
+	<!-- jquery -->
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="assets/js/fixed-header.js"></script>
+	<script type="text/javascript" src="assets/js/smooth-scroll.js"></script>
+  
 </body>
 </html>

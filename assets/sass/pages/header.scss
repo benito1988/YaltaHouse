@@ -21,15 +21,25 @@
 .logo {
     font-size: 20px;
     font-weight: 600;
-    font-family: "Roboto", sans-serif;
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    text-shadow: 1.3px 2.7px 16px rgba(0, 0, 0, 0.15);
 }
 
 .light-text {
     font-weight: 200;
+    font-family: "Roboto", sans-serif;
 }
 
 .contacts {
-
     display: none;
 
     @media all and (min-width: $breakpoint-small) {
@@ -46,7 +56,7 @@
 .nav {
     max-height: 0px;
     transition: all $transition;
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 .nav-wrapper {
@@ -60,7 +70,7 @@
     border-bottom: none;
     
     @media all and (min-width: $breakpoint-small) {
-        border-bottom: 1px solid rgba(0,0,0,0.3);
+        border-bottom: 1px solid $blue;
         flex-direction: row;
         justify-content: center;
         align-items: center;
@@ -76,47 +86,44 @@
   }
 
   .nav-link {
-      font-weight: 200;
-      display: inline-block;
-      padding: 10px 0;
-      font-size: 14px;
-      position: relative;
-      transition: all $transition;
-      width: 100%;
-      border-bottom: 1px solid $light-gray;
+    display: inline-block;
+    padding: 20px 0;
+    position: relative;
+    transition: all $transition;
+    width: 100%;
+    border-bottom: 1px solid $light-gray;
+    font-size: 14px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.69;
+    letter-spacing: 1.6px;
+    text-align: center;
 
-      
-        @media all and (min-width: $breakpoint-small) {
-            
-            width: auto;
-            border-bottom: none;
+    @media all and (min-width: $breakpoint-small) {
+        width: auto;
+        border-bottom: none;
+    }
 
-           
-            
-        }
-
-      &:after {
-        transition: all $transition;
-        content: none;
-        position: absolute;
-        bottom: -2px;
-        left: 0;
-        width: 0%;
-        height: 3px;
-        background-color: $blue;
+    &:after {
+    transition: all $transition;
+    content: none;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: $blue;
 
         @media all and (min-width: $breakpoint-small) {
             content: "";
         }
-      }
+    }
 
-      &:hover {
-        &:after {
+    &:hover:after {
         width: 100%;
-        }
-      }
-  }
-
+    }
+}
 
 .header {
     height: 80vh;
@@ -153,10 +160,72 @@
 
 
 .header-navigation {
+    position: absolute;
+    top: 0;
+    transition: all 0.2s;
+
+    .fixed & {
+        top: 0;
+        position: fixed;
+    }
 
     &.nav-show {
         .nav {
             max-height: 1000px
         }
+    }
+}
+
+.title-slogan {
+	font-family: 'Playfair Display', serif;
+    font-size: 88px;
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: 2.2px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 1.3px 2.7px 16px rgba(0, 0, 0, 0.15);
+    position: relative;
+    margin: 0 0 24px;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200px;
+        height: 1px;
+        background-color: #009beb;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -14px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200px;
+        height: 1px;
+        background-color: $blue;
+    }
+}
+
+.sub-title-slogan {
+    font-size: 34px;
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.9px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1.3px 2.7px 16px rgba(0, 0, 0, 0.15);
+    margin: 0 0 22px;
+
+    &:last-child {
+        margin: 0;
     }
 }

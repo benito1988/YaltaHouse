@@ -13,7 +13,7 @@ body{
 }
 
 .small-title {
-	font-size: $small-title
+	font-size: $small-title;
 }
 
 .title {
@@ -40,7 +40,7 @@ body{
 	margin-bottom: 20px;
 	
 	@media all and (min-width: $breakpoint-small) {
-		margin-bottom: 60px;
+		margin-bottom: 100px;
 		text-align: center;
     }
 }

@@ -1,7 +1,8 @@
 html, body{
 	overflow-x: hidden;
-	height: 100%;
+	// height: 100%;
 	-webkit-overflow-scrolling: touch;
+	font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -9,7 +10,7 @@ body {
 	padding: 0;
 }
 
-.rooms, .convenience, .about-us, .nearby, .contact-us {
+.rooms, .convenience, .about-us, .nearby {
 	padding-top: 20px;
 	padding-bottom: 20px;
 

@@ -90,7 +90,7 @@
     }
 
     .small-title {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
 }
 
@@ -106,11 +106,11 @@
     }
 
     .small-title {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
 
     .distace {
-        color: $gray;
+        color: lighten($gray,20%);
         float: right;
     }
 }
@@ -170,6 +170,10 @@
         padding: 0 40px;
         margin-top: 30px;
     }
+
+    .icon {
+        margin-bottom: 30px;
+    }
 }
 
 .card-picture {
@@ -202,12 +206,12 @@
         background-color: #fff;
         
         @media all and (min-width: $breakpoint-small) {   
-            box-shadow: $shadow;
-            width: 300px;
+            box-shadow: 2.2px 4.5px 4.6px 0.4px rgba(0, 0, 0, 0.06), 5.7px 11.7px 32.2px 2.8px rgba(0, 0, 0, 0.08);
+            width: 420px;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            padding: 90px 30px;
+            padding: 90px 60px;
         }
 
         .title {

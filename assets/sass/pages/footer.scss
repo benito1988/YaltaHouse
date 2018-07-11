@@ -1,6 +1,5 @@
 .footer {
-    padding-top: 40px;
-    padding-bottom: 100px;
+    padding: 100px 0 270px;
     background: url(../image/footer-image.jpg) no-repeat center bottom;
     background-size: cover;
 }
@@ -12,4 +11,16 @@
 .copiright {
     color: $blue;
     opacity: 0.6;
+}
+
+.footer {
+    .logo {
+        color: $black;
+        font-size: 22px;
+    }
+
+    .list-item a{
+        color: $black;
+        font-weight: 500;
+    }
 }
