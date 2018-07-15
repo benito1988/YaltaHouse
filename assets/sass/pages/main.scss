@@ -1,11 +1,5 @@
 
 //rooms
-.room-picture {
-    height: 120px;
-    background-color: lightgray;
-    display: inline-block;
-    width: 100%;
-}
 
 .room-card {
     display: flex;
@@ -22,6 +16,29 @@
         
         &:hover {
             box-shadow: $shadow;
+
+            .currency{
+                color: $blue !important;
+            } 
+
+            .room-photo img{
+                opacity: 0.8;
+            }
+
+        }
+    }
+
+    .room-photo {
+        height: 120px;
+        background-color: $blue;
+        display: inline-block;
+        width: 100%;
+    
+        & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all $transition;
         }
     }
 
@@ -46,7 +63,13 @@
     }
 
     .price {
-        font-size: 20px;
+        font-size: 26px;
+
+        .currency {
+            font-size: 16px;
+            color: $gray;
+            margin-right: 3px;
+        }
     }
 
     .btn {
@@ -84,7 +107,8 @@
 .convenience {
 
     .icon {
-        font-size: 12px;
+        width: 40px;
+        height: 40px;
         display: inline-block;
         margin-bottom: 20px;
     }
@@ -100,6 +124,8 @@
 .nearby {
 
     .icon {
+        height: 40px;
+        width: 40px;
         font-size: 12px;
         display: inline-block;
         margin-bottom: 20px;
@@ -172,7 +198,9 @@
     }
 
     .icon {
-        margin-bottom: 30px;
+        width: 40px;
+        height: 40px;
+        margin-bottom: 25px;
     }
 }
 
@@ -182,6 +210,13 @@
     height: 260px;
     margin-left: -$col-padding;
     margin-right: -$col-padding;
+    overflow: hidden;
+
+    & > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
 
     @media all and (min-width: $breakpoint-small) {   
@@ -214,13 +249,34 @@
             padding: 90px 60px;
         }
 
-        .title {
-            margin-bottom: 20px;
+        .icon {
+            width: 16px;
+            height: 16px;
+            margin-right: 14px;
+            
+            &-large {
+                width: 50px;
+                height: 50px;
+                margin-bottom: 20px;
+            }
         }
 
-        .location, .mobile, .email {
-            display: block;
-            margin-bottom: 10px;
+        .title {
+            margin-bottom: 60px;
+        }
+
+        .text {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            color: $black;
+            font-size: 14px;
+            line-height: auto;
+            
+            &.link {
+                text-decoration: underline;
+                font-weight: 600;
+            }
         }
     }
 

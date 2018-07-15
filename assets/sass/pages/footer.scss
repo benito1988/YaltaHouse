@@ -1,19 +1,8 @@
 .footer {
-    padding: 100px 0 270px;
-    background: url(../image/footer-image.jpg) no-repeat center bottom;
+    padding: 90px 0 270px;
+    background: url(../img/footer-bg-picture.jpg) no-repeat center top;
     background-size: cover;
-}
 
-.footer-top {
-    margin-bottom: 200px;
-}
-
-.copiright {
-    color: $blue;
-    opacity: 0.6;
-}
-
-.footer {
     .logo {
         color: $black;
         font-size: 22px;
@@ -23,4 +12,13 @@
         color: $black;
         font-weight: 500;
     }
+}
+
+.footer-top {
+    margin-bottom: 190px;
+}
+
+.copiright {
+    color: $blue;
+    opacity: 0.6;
 }

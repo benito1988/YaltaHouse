@@ -1,13 +1,29 @@
-.header-navigation {
-    background-color: #fff;
-    padding-top: 20px;
-    margin-bottom: 20px;
+.header {
+    height: 90vh;
+    min-height: 540px;
+    background: url(../img/header-picture.jpg) no-repeat center;
+    background-size: cover;
     position: relative;
-    z-index: 2;
 
-    @media all and (min-width: $breakpoint-small) {
-        background-color: transparent;
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: transparentize(#001843,.25);
     }
+}
+
+.header-slider {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
 }
 
 .header-info {
@@ -19,12 +35,11 @@
 }
 
 .logo {
-    font-size: 20px;
     font-weight: 600;
-    color: #fff;
+    color: $black;
     font-family: 'Playfair Display', serif;
     text-transform: uppercase;
-    font-size: 40px;
+    font-size: 20px;
     font-weight: 900;
     font-style: normal;
     font-stretch: normal;
@@ -32,6 +47,12 @@
     letter-spacing: 1px;
     text-align: center;
     text-shadow: 1.3px 2.7px 16px rgba(0, 0, 0, 0.15);
+
+    @media all and (min-width: $breakpoint-small) {
+        font-size: 36px;
+        color: #fff;
+        background-color: transparent;
+    }
 }
 
 .light-text {
@@ -40,23 +61,50 @@
 }
 
 .contacts {
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 0;
+
+    & > a {
+        color: #fff;
+        font-weight: 300;
+    }
 
     @media all and (min-width: $breakpoint-small) {
         display: block;
     }
 
-    .mobile, .email, .facebook, .vk{
+    .contact-link {
         text-align: right;
         font-size: $small-text;
         margin-left: 10px;
+        display: inline-block;
+        
+        
+        .icon {
+            height: 12px;
+            width: 12px;
+            margin-right: 5px;
+        }
+
+        .i-facebook-w, .i-vk-w {
+            width: 20px;
+            height: 20px;
+        }
     }
+
+
 }
 
 .nav {
     max-height: 0px;
     transition: all $transition;
-    // overflow: hidden;
+    overflow: hidden;
+
+    @media all and (min-width: $breakpoint-small) {
+        overflow: visible;
+    }
 }
 
 .nav-wrapper {
@@ -89,9 +137,9 @@
     display: inline-block;
     padding: 20px 0;
     position: relative;
-    transition: all $transition;
     width: 100%;
     border-bottom: 1px solid $light-gray;
+    color: #fff;
     font-size: 14px;
     font-weight: 300;
     font-style: normal;
@@ -125,23 +173,8 @@
     }
 }
 
-.header {
-    height: 80vh;
-    min-height: 540px;
-    background-color: lightgray;
-    position: relative;
-}
-
-.header-slider {
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
 .slide-slogan {
+    padding-top: 90px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -158,27 +191,93 @@
     }
 }
 
+.header-navigation {
+    
+
+    @media all and (min-width: $breakpoint-small) {
+        
+    }
+}
+
 
 .header-navigation {
-    position: absolute;
-    top: 0;
-    transition: all 0.2s;
 
-    .fixed & {
-        top: 0;
-        position: fixed;
+    background-color: #fff;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    @media all and (min-width:$breakpoint-small) {
+        position: absolute;
+        background-color: transparent;
+
+        .fixed & {
+            position: fixed;
+            background-color: #fff;
+            box-shadow: $shadow;
+            padding-top: 0;
+            padding-bottom: 16px;
+
+
+            .header-info {
+                float: left;
+
+                .logo-wrapper {
+                    padding-top: 9px;
+                }
+
+                .logo {
+                    font-size: 20px;
+                    color: $black;
+                }
+            
+                .contacts {
+                    display: none;
+                }
+            }
+
+            .nav {
+                float: right;
+                
+                .nav-wrapper {
+                    padding-top: 0;
+                    justify-content: flex-end;
+                    border-bottom: none;
+                    
+                    .nav-item {
+                        padding: 0 10px;
+
+                        &:last-child {
+                            padding-right: 0;
+                        }
+                        
+                        .nav-link {
+                            font-size: 12px;
+                            color: $black;
+                        }
+                    }
+                }
+            }
+        }
     }
 
-    &.nav-show {
-        .nav {
-            max-height: 1000px
+    @media all and (max-width:$breakpoint-small) {
+        &.nav-show {
+            .nav {
+                max-height: 1000px
+            }
         }
     }
 }
 
 .title-slogan {
 	font-family: 'Playfair Display', serif;
-    font-size: 88px;
+    font-size: 70px;
     font-weight: 900;
     font-style: normal;
     font-stretch: normal;
@@ -214,7 +313,7 @@
 }
 
 .sub-title-slogan {
-    font-size: 34px;
+    font-size: 28px;
     font-weight: 300;
     font-style: italic;
     font-stretch: normal;
