@@ -1,17 +1,15 @@
-<svg 
- xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink"
- width="1471px" height="645px">
-<defs>
-<linearGradient id="PSgrad_0" x1="0%" x2="0%" y1="100%" y2="0%">
-  <stop offset="53%" stop-color="rgb(255,255,255)" stop-opacity="1" />
-  <stop offset="89%" stop-color="rgb(240,251,255)" stop-opacity="1" />
-  <stop offset="100%" stop-color="rgb(225,246,255)" stop-opacity="1" />
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1366.9 645" style="enable-background:new 0 0 1366.9 645;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.5;fill:url(#SVGID_1_);}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-167.5383" y1="1121.2594" x2="-167.5383" y2="1122.2594" gradientTransform="matrix(1469.5768 0 0 -644.106 246893.4688 722854.75)">
+	<stop  offset="0.53" style="stop-color:#FFFFFF"/>
+	<stop  offset="0.89" style="stop-color:#F0FBFF"/>
+	<stop  offset="1" style="stop-color:#E1F6FF"/>
 </linearGradient>
-
-</defs>
-<path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
- d="M104.117,0.688 C104.117,0.688 208.982,157.644 389.524,79.165 C570.067,0.685 597.103,-15.356 738.709,23.759 C880.315,62.874 849.191,187.824 1077.728,133.570 C1306.265,79.317 1453.750,343.987 1469.904,408.379 C1486.058,472.772 1028.426,644.794 1028.426,644.794 C1028.426,644.794 14.864,378.428 1.779,372.875 C-11.305,367.322 104.117,0.688 104.117,0.688 Z"/>
-<path fill="url(#PSgrad_0)"
- d="M104.117,0.688 C104.117,0.688 208.982,157.644 389.524,79.165 C570.067,0.685 597.103,-15.356 738.709,23.759 C880.315,62.874 849.191,187.824 1077.728,133.570 C1306.265,79.317 1453.750,343.987 1469.904,408.379 C1486.058,472.772 1028.426,644.794 1028.426,644.794 C1028.426,644.794 14.864,378.428 1.779,372.875 C-11.305,367.322 104.117,0.688 104.117,0.688 Z"/>
+<path class="st0" d="M0,0.7c0,0,104.9,157,285.4,78.5C466,0.7,493-15.4,634.6,23.8s110.5,164.1,339,109.8
+	c228.5-54.3,376,210.4,392.2,274.8c16.2,64.4-441.5,236.4-441.5,236.4L0,372.9V0.7z"/>
 </svg>

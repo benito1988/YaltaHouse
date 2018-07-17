@@ -1,17 +1,15 @@
-<svg 
- xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink"
- width="1470px" height="436px">
-<defs>
-<linearGradient id="PSgrad_0" x1="0%" x2="0%" y1="100%" y2="0%">
-  <stop offset="53%" stop-color="rgb(255,255,255)" stop-opacity="1" />
-  <stop offset="89%" stop-color="rgb(240,251,255)" stop-opacity="1" />
-  <stop offset="100%" stop-color="rgb(225,246,255)" stop-opacity="1" />
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1367 436" style="enable-background:new 0 0 1367 436;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.5;fill:url(#SVGID_1_);}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-63.4915" y1="1016.6675" x2="-63.4915" y2="1017.6675" gradientTransform="matrix(1470.0132 0 0 -436.007 94016.8359 443710.125)">
+	<stop  offset="0.53" style="stop-color:#FFFFFF"/>
+	<stop  offset="0.89" style="stop-color:#F0FBFF"/>
+	<stop  offset="1" style="stop-color:#E1F6FF"/>
 </linearGradient>
-
-</defs>
-<path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
- d="M1366.602,0.001 C1366.602,0.001 1054.186,5.830 831.266,102.866 C608.345,199.901 498.461,126.749 392.702,89.951 C115.564,-6.477 16.568,232.386 0.409,275.975 C-15.750,319.564 442.018,436.008 442.018,436.008 C442.018,436.008 1455.882,255.700 1468.970,251.941 C1482.059,248.182 1366.602,0.001 1366.602,0.001 Z"/>
-<path fill="url(#PSgrad_0)"
- d="M1366.602,0.001 C1366.602,0.001 1054.186,5.830 831.266,102.866 C608.345,199.901 498.461,126.749 392.702,89.951 C115.564,-6.477 16.568,232.386 0.409,275.975 C-15.750,319.564 442.018,436.008 442.018,436.008 C442.018,436.008 1455.882,255.700 1468.970,251.941 C1482.059,248.182 1366.602,0.001 1366.602,0.001 Z"/>
+<path class="st0" d="M1366.6,0c0,0-312.4,5.8-535.3,102.9c-222.9,97-332.8,23.9-438.6-12.9C115.6-6.5,16.6,232.4,0.4,276
+	S442,436,442,436l925-184.1L1366.6,0z"/>
 </svg>

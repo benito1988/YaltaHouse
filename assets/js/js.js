@@ -12,6 +12,10 @@ $(".menu").click(function(){
     $(".header-navigation").toggleClass("nav-show");
 });
 
+$(".nav-link").click( function(){
+    $(".header-navigation").removeClass("nav-show");
+});
+
 // add google map
 function myMap() {
     var mapProp= {
@@ -19,4 +23,4 @@ function myMap() {
         zoom:5,
     };
     var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-    }
+}

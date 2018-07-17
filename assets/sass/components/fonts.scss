@@ -8,7 +8,11 @@ body{
 	color: $black;
 }
 
-.sub-title {
+.large-title {
+	font-size: $large-title;
+}
+
+.title {
 	font-size: $title;
 }
 
@@ -16,17 +20,18 @@ body{
 	font-size: $small-title;
 }
 
-.title {
+.sub-title {
 	font-size: $title;
 }
 
-.large-title {
-	font-size: $large-title;
-}
-
-.small-text {
-	font-size: $small-text;
-	font-weight: 400;
+.title-section {
+	font-size: $title;
+	margin-bottom: 20px;
+	
+	@media all and (min-width: $bp-small) {
+		margin-bottom: 100px;
+		text-align: center;
+    }
 }
 
 .text {
@@ -35,14 +40,9 @@ body{
 	line-height: 1.6;
 }
 
-.title-section {
-	font-size: $title;
-	margin-bottom: 20px;
-	
-	@media all and (min-width: $breakpoint-small) {
-		margin-bottom: 100px;
-		text-align: center;
-    }
+.small-text {
+	font-size: $small-text;
+	font-weight: 400;
 }
 
 .light-text {

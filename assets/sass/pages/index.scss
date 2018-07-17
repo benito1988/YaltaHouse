@@ -1,6 +1,5 @@
 html, body{
 	overflow-x: hidden;
-	// height: 100%;
 	-webkit-overflow-scrolling: touch;
 	font-family: 'Roboto', sans-serif;
 }
@@ -14,7 +13,7 @@ body {
 	padding-top: 20px;
 	padding-bottom: 20px;
 
-	@media all and (min-width: $breakpoint-small) {
+	@media all and (min-width: $bp-small) {
 		padding-top: 60px;
 		padding-bottom: 60px;
 	}

@@ -1,9 +1,12 @@
 .header {
-    height: 90vh;
-    min-height: 540px;
     background: url(../img/header-picture.jpg) no-repeat center;
     background-size: cover;
     position: relative;
+    height: 90vh;
+    
+    @media all and (min-width: $bp-small) {  
+        min-height: 540px;
+    }
 
     &::after {
         content: "";
@@ -49,7 +52,7 @@
     text-align: center;
     text-shadow: 1.3px 2.7px 16px rgba(0, 0, 0, 0.15);
 
-    @media all and (min-width: $breakpoint-small) {
+    @media all and (min-width: $bp-small) {
         font-size: 36px;
         color: #fff;
         background-color: transparent;
@@ -66,22 +69,22 @@
     align-items: center;
     justify-content: flex-end;
     font-size: 0;
+    display: none;
 
     & > a {
         color: #fff;
         font-weight: 300;
     }
 
-    @media all and (min-width: $breakpoint-small) {
-        display: block;
+    @media all and (min-width: $bp-small) {
+        display: inline-block;
     }
 
     .contact-link {
-        text-align: right;
-        font-size: $small-text;
-        margin-left: 10px;
         display: inline-block;
-        
+        margin-left: 10px;
+        font-size: $small-text;
+        text-align: right;
         
         .icon {
             height: 12px;
@@ -94,8 +97,6 @@
             height: 20px;
         }
     }
-
-
 }
 
 .nav {
@@ -103,7 +104,7 @@
     transition: all $transition;
     overflow: hidden;
 
-    @media all and (min-width: $breakpoint-small) {
+    @media all and (min-width: $bp-small) {
         overflow: visible;
     }
 }
@@ -112,13 +113,12 @@
     display: flex;
     flex-wrap: wrap;
     padding-top: 20px;
-    
     flex-direction: column;
     justify-content: stretch;
     align-items: stretch;
     border-bottom: none;
     
-    @media all and (min-width: $breakpoint-small) {
+    @media all and (min-width: $bp-small) {
         border-bottom: 1px solid $blue;
         flex-direction: row;
         justify-content: center;
@@ -127,9 +127,9 @@
   }
 
   .nav-item {
-      padding: 0;
+    padding: 0;
 
-    @media all and (min-width: $breakpoint-small) {
+    @media all and (min-width: $bp-small) {
         padding: 0 20px;
     }
   }
@@ -147,10 +147,9 @@
     line-height: 0.69;
     letter-spacing: 1.6px;
     text-align: center;
-    
     color: $black;
     
-    @media all and (min-width: $breakpoint-small) {
+    @media all and (min-width: $bp-small) {
         color: #fff;
         width: auto;
         border-bottom: none;
@@ -164,9 +163,9 @@
     left: 0;
     width: 0%;
     height: 3px;
-    background-color: $blue;
+    background-color: #fff;
 
-        @media all and (min-width: $breakpoint-small) {
+        @media all and (min-width: $bp-small) {
             content: "";
         }
     }
@@ -184,6 +183,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    padding: 0 20px;
 }
 
 .menu {
@@ -214,6 +214,7 @@
         .nav-show &:nth-child(2) {
             opacity: 0;
         }
+
         .nav-show &:nth-child(1) {
             position: absolute;
             top: 12px;
@@ -221,6 +222,7 @@
             transform: rotate(45deg);
             width: 26px !important;
         }
+
         .nav-show &:nth-child(3) {
             position: absolute;
             top: 12px;
@@ -231,21 +233,23 @@
     }
 
     &:hover .menu-line {
+
         &:nth-child(1), &:nth-child(3) {
             width: 90%;
         }
+        
         &:nth-child(2) {
             width: 100%;
         }
     }
 
-    @media all and (min-width: $breakpoint-small) {
+    @media all and (min-width: $bp-small) {
         display: none;
     }
 }
 
 .header-navigation {
-    background-color: #fff;
+    background-color: rgba(255,255,255,.98);
     padding-top: 10px;
     margin-bottom: 20px;
     position: relative;
@@ -254,19 +258,19 @@
     top: 0;
     left: 0;
     right: 0;
-    min-height: 52px;
+    min-height: 50px;
+    box-shadow: $shadow;
 
-    @media all and (min-width:$breakpoint-small) {
+    @media all and (min-width:$bp-small) {
         position: absolute;
         background-color: transparent;
+        box-shadow: none;
 
         .fixed & {
             position: fixed;
             background-color: #fff;
             box-shadow: $shadow;
             padding-top: 0;
-            padding-bottom: 16px;
-
 
             .header-info {
                 float: left;
@@ -303,6 +307,10 @@
                         .nav-link {
                             font-size: 12px;
                             color: $black;
+
+                            &::after {
+                                background-color: $blue;
+                            }
                         }
                     }
                 }
@@ -310,7 +318,7 @@
         }
     }
 
-    @media all and (max-width:$breakpoint-small) {
+    @media all and (max-width:$bp-small) {
         &.nav-show {
             .nav {
                 max-height: 1000px
@@ -321,7 +329,7 @@
 
 .title-slogan {
 	font-family: 'Playfair Display', serif;
-    font-size: 70px;
+    font-size: 50px;
     font-weight: 900;
     font-style: normal;
     font-stretch: normal;
@@ -334,6 +342,18 @@
     position: relative;
     margin: 0 0 24px;
 
+    @media all and (min-width:$bp-small) {
+        font-size: 70px;
+    }
+
+    .light-text {
+        display: block;
+
+        @media all and (min-width:$bp-small) {
+            display: initial;
+        }
+    }
+
     &:before {
         content: "";
         position: absolute;
@@ -344,6 +364,7 @@
         height: 1px;
         background-color: #009beb;
     }
+    
     &:after {
         content: "";
         position: absolute;
@@ -357,7 +378,7 @@
 }
 
 .sub-title-slogan {
-    font-size: 28px;
+    font-size: 20px;
     font-weight: 300;
     font-style: italic;
     font-stretch: normal;
@@ -367,6 +388,10 @@
     color: #fff;
     text-shadow: 1.3px 2.7px 16px rgba(0, 0, 0, 0.15);
     margin: 0 0 22px;
+
+    @media all and (min-width:$bp-small) {
+        font-size: 28px;
+    }
 
     &:last-child {
         margin: 0;

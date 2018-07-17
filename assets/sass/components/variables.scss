@@ -11,13 +11,14 @@ $light-gray: #EDEFF2;
 $gray: #858B91;
 $black: #3C4045;
 $blue: #009beb;
+$red: #f5415f;
+
+//grid
+$bp-small: 767px;
+$bp-medium: 989px;
+$bp-large: 1399px;
 
 //other
 $col-padding: 20px;
 $transition: 0.3s;
 $shadow: 0 0px 15px rgba(0, 0, 0, 0.2), 0 0px 3px rgba(0, 0, 0, 0.1);
-
-//grid
-$breakpoint-small: 767px;
-$breakpoint-medium: 989px;
-$breakpoint-large: 1399px;

@@ -25,6 +25,13 @@ nav, header, footer, main, aside{
   text-align: right;
 }
 
+.separator {
+  height: 1px;
+  width: 100%;
+  background-color: $light-gray;
+  display: inline-block;
+  margin-bottom: 40px;
+}
 
 //button
 
@@ -43,21 +50,26 @@ nav, header, footer, main, aside{
   
   &-gray {
     color: $blue;
+    background-color: #fff;
     border: 1px solid $light-gray;
   }
 }
-
 
 //list
 
 .list {
   width: 100%;
+  margin-bottom: 40px;
 }
 
 .list-item {
   font-size: 14px;
   font-weight: 400;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   width: 100%;
   color: $black;
+  
+  @media all and (min-width: $bp-small) {   
+    margin-bottom: 15px;
+  }
 }

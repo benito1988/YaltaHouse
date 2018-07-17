@@ -1,11 +1,17 @@
 .footer {
-    padding: 90px 0 270px;
+    padding: 40px 0;
     background: url(../img/footer-bg-picture.jpg) no-repeat center top;
     background-size: cover;
+    
+    @media all and (min-width: $bp-small) {
+        padding: 90px 0 270px;
+    }
 
     .logo {
         color: $black;
         font-size: 22px;
+        margin-bottom: 20px;
+        display: inline-block;
     }
 
     .list-item a{
@@ -15,7 +21,11 @@
 }
 
 .footer-top {
-    margin-bottom: 190px;
+    margin-bottom: 40px;
+    
+    @media all and (min-width: $bp-small) {
+        margin-bottom: 190px;
+    }
 }
 
 .copiright {
