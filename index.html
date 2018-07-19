@@ -5,20 +5,22 @@
     <title>Yalat House</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/style.css">
+
+	<!-- slick.css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css"/>
 	
 	<!-- fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
 </head>
 <body>
-<div class="menu"></div>
-
 <div class="modal-window">
 	<div class="modal-card">
-		<button class="close-modal">Close</button>
+		<button class="close-modal btn-close"></button>
 		<div class="room-description">
 			<div class="description-left-side">
-				<h3 class="title">Title</h3>
+				<h3 class="title">Заголовок Секции</h3>
 				<p class="text">До пляжа можно дойти всего за 12 минут. Апартаменты «На Лазарной 19А» расположены в 19 минутах ходьбы от Массандровского дворца. К услугам гостей номера с бесплатным Wi-Fi, мини-кухней, собственной ванной комнатой и террасой.</p>
 				<p class="text">В числе удобств номеров микроволновая печь, холодильник, чайник, душ, бесплатные туалетно-косметические принадлежности и шкаф для одежды. В числе удобств номеров телевизор с плоским экраном и плита. В некоторых номерах есть балкон.</p>
 				<ul class="service-list">
@@ -34,7 +36,18 @@
 			</div>
 			<div class="description-right-side">
 				<div class="slider">
-					slider
+					<div class="slider-room-picture">
+						<div class="slider-picture-large"><img class="slider-picture-large-img" src="assets/img/room.jpg" alt="room picture"></div>
+						<div class="slider-picture-large"><img class="slider-picture-large-img" src="assets/img/room02.jpg" alt="room picture"></div>
+						<div class="slider-picture-large"><img class="slider-picture-large-img" src="assets/img/room.jpg" alt="room picture"></div>
+						<div class="slider-picture-large"><img class="slider-picture-large-img" src="assets/img/room02.jpg" alt="room picture"></div>
+					</div>
+					<div class="slider-preview-picture">
+						<div class="slider-picture-small"><img class="slider-picture-small-img" src="assets/img/room.jpg" alt="room picture"></div>
+						<div class="slider-picture-small"><img class="slider-picture-small-img" src="assets/img/room02.jpg" alt="room picture"></div>
+						<div class="slider-picture-small"><img class="slider-picture-small-img" src="assets/img/room.jpg" alt="room picture"></div>
+						<div class="slider-picture-small"><img class="slider-picture-small-img" src="assets/img/room02.jpg" alt="room picture"></div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -44,18 +57,23 @@
 					<div class="input-title">Кол. человек</div>
 					<div class="input-prepend-append">
 						<button type="button"class="btn btn-prepend"> - </button>
-						<input class="feald" type="text" placeholder="">
+						<input class="feald" type="text" placeholder="0">
 						<button type="button"class="btn btn-append"> + </button>
 					  </div>
 				</div>
-				<div class="input-wrapper">
-					<div class="input-title">Заезд</div>
-					<input class="feald i-calendar-g" type="text" placeholder="Text">
+
+				<div class="input-group-date">
+					<div class="input-wrapper">
+						<div class="input-title">Заезд</div>
+						<input class="feald i-calendar-g" type="text" placeholder="Дата заезда">
+					</div>
+					<span class="line">-</span>
+					<div class="input-wrapper">
+						<div class="input-title">Выезд</div>
+						<input class="feald i-calendar-g" type="text" placeholder="Дата выезда">
+					</div>
 				</div>
-				<div class="input-wrapper">
-					<div class="input-title">Выезд</div>
-					<input class="feald i-calendar-g" type="text" placeholder="Text">
-				</div>
+
 				<div class="input-wrapper">
 					<div class="input-title">Телефон</div>
 					<input class="feald i-phone-g" type="text" placeholder="Ваш телефон">
@@ -68,7 +86,7 @@
 			<div class="room-order">
 				<div class="row">
 					<div class="col-sm-2">
-						<button class="btn btn-gray">Назад</button>
+						<button class="btn btn-gray close-modal">Назад</button>
 					</div>
 					<div class="col-sm-10 text-right">
 						<div class="price-container">	
@@ -126,7 +144,6 @@
 		</div>
 	</div>
 </header>
-
 <main class="main">
 	<span id="rooms"></span>
 	<div class="rooms">
@@ -471,56 +488,82 @@
 					</div>
 					<div class="col-sm-12 col-md-8  col-lg-6">
 						<div class="row">
-							<div class="col-sm-12 col-md-4">
+							<div class="col-sm-6 col-md-4">
 								<ul class="list">
 									<li class="list-item"><a href="#">Домашняя</a></li>
 									<li class="list-item"><a href="#">Комнаты</a></li>
 									<li class="list-item"><a href="#">Удобства</a></li>
 								</ul>
 							</div>
-							<div class="col-sm-12 col-md-4">
+							<div class="col-sm-6 col-md-4">
 								<ul class="list">
 									<li class="list-item"><a href="#">О нас</a></li>
 									<li class="list-item"><a href="#">Поблизости</a></li>
 									<li class="list-item"><a href="#">Контакты</a></li>
 								</ul>
 							</div>
-							<div class="col-sm-12 col-md-4">
+							<div class="col-sm-6 col-md-4">
 								<ul class="list">
-									<li class="list-item">Контакты</li>
+									<li class="list-item small-title">Контакты</li>
 									<li class="list-item"><a href="#">gmail@gmail.com</a></li>
 									<li class="list-item"><a href="#">+38 (050) 555 55 55</a></li>
 								</ul>
 							</div>
+							<div class="col-sm-6 col-md-1 col-lg-1">
+								<ul class="social-list">
+									<li class="list-item small-title">Контакты</li>
+									<li class="list-item">
+										<a class="vk" href="#">
+											<i class="icon i-facebook-b"></i>
+										</a>
+									</li>
+									<li class="list-item">
+										<a class="facebook" href="#">
+											<i class="icon i-vk-b"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
 						</div>
-					</div>
-					<div class="col-sm-12 col-md-1  col-lg-1">
-						<ul class="social-list">
-							<li class="list-item">
-								<a class="vk" href="#">
-									<i class="icon i-facebook-b"></i>
-								</a>
-							</li>
-							<li class="list-item">
-								<a class="facebook" href="#">
-									<i class="icon i-vk-b"></i>
-								</a>
-							</li>
-						</ul>
 					</div>
 				</div>
 			</div>
-			<span class="copiright small-text">All rights reserved YaltaHouse(c)2018</span>
+			<span class="copiright small-text">All rights reserved YaltaHouse &copy; 2018</span>
 		</div>
 </footer>
 
 	<!-- jquery -->
 	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+	<!-- slick.js -->
+	<script type="text/javascript" src="assets/js/slick.min.js"></script>
+	
 	<!-- js -->
 	<script type="text/javascript" src="assets/js/fixed-header.js"></script>
 	<script type="text/javascript" src="assets/js/smooth-scroll.js"></script>
 	<script type="text/javascript" src="assets/js/js.js"></script>
+
+	<!--  -->
+	<script>
+	$(document).ready(function(){
+		$('.slider-room-picture').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			fade: true,
+			asNavFor: '.slider-preview-picture'
+		});
+		$('.slider-preview-picture').slick({
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			asNavFor: '.slider-room-picture',
+			centerMode: true,
+			focusOnSelect: true
+		});
+	});
+	</script>
+
 	<!-- google map -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
 

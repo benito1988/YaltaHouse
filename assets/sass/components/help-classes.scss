@@ -42,6 +42,10 @@ nav, header, footer, main, aside{
   border: none;
   outline: none;
   cursor: pointer;
+
+  &:hover {
+    background-color: darken($blue,5%);
+  }
   
   &-blue {
     color: #fff;
@@ -52,6 +56,10 @@ nav, header, footer, main, aside{
     color: $blue;
     background-color: #fff;
     border: 1px solid $light-gray;
+
+    &:hover {
+      color: #fff;
+    }
   }
 }
 
