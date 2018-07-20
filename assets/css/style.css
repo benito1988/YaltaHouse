@@ -369,6 +369,14 @@ body { margin: 0; padding: 0; }
 
 .copiright { color: #3C4045; }
 
+.footer .i-vk-b { background-image: url(../img/vk-w.svg); }
+
+@media all and (min-width: 767px) { .footer .i-vk-b { background-image: url(../img/vk-b.svg); } }
+
+.footer .i-facebook-b { background-image: url(../img/facebook-w.svg); }
+
+@media all and (min-width: 767px) { .footer .i-facebook-b { background-image: url(../img/facebook-b.svg); } }
+
 .container { margin: 0 auto; padding-left: 20px; padding-right: 20px; max-width: 1200px; width: 100%; }
 
 .container:after { content: ""; display: table; clear: both; }
