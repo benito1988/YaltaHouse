@@ -6,6 +6,7 @@
     @media all and (min-width: $bp-small) {
         background: url(../img/footer-bg-picture.jpg) no-repeat center;
         padding: 90px 0 270px;
+        background-size: cover;
     }
 
     .logo {

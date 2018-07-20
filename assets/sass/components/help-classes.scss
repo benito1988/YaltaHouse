@@ -75,6 +75,7 @@ nav, header, footer, main, aside{
   font-weight: 400;
   margin-bottom: 10px;
   width: 100%;
+  display: inline-block;
   color: $black;
   
   @media all and (min-width: $bp-small) {   

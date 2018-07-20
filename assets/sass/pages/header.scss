@@ -8,6 +8,17 @@
         min-height: 540px;
     }
 
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 200px;
+        background: linear-gradient(to top, rgba(0,0,0,0.2) 20%,rgba(0,0,0,0) 100%);
+        z-index: 10;
+    }
+
     &::after {
         content: "";
         position: absolute;
@@ -29,7 +40,7 @@
     z-index: 1;
     
     @media all and (min-width: $bp-small) {  
-        padding-top: 90px;
+        padding-top: 40px;
     }
 }
 
@@ -54,7 +65,6 @@
     line-height: normal;
     letter-spacing: 1px;
     text-align: center;
-    text-shadow: 1.3px 2.7px 16px rgba(0, 0, 0, 0.15);
 
     @media all and (min-width: $bp-small) {
         font-size: 36px;
@@ -69,9 +79,6 @@
 }
 
 .contacts {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
     font-size: 0;
     display: none;
 
@@ -81,7 +88,9 @@
     }
 
     @media all and (min-width: $bp-small) {
-        display: inline-block;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
     }
 
     .contact-link {
@@ -125,7 +134,7 @@
     padding: 20px 0;
     
     @media all and (min-width: $bp-small) {
-        padding-top: 20px;
+        padding: 20px 0 0;
         border-bottom: 1px solid $blue;
         flex-direction: row;
         justify-content: center;
@@ -350,7 +359,6 @@
     text-align: center;
     text-transform: uppercase;
     color: #fff;
-    text-shadow: 1.3px 2.7px 16px rgba(0, 0, 0, 0.15);
     position: relative;
     margin: 0 0 24px;
 
@@ -398,7 +406,6 @@
     letter-spacing: 0.9px;
     text-align: center;
     color: #fff;
-    text-shadow: 1.3px 2.7px 16px rgba(0, 0, 0, 0.15);
     margin: 0 0 22px;
 
     @media all and (min-width:$bp-small) {
