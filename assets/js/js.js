@@ -16,6 +16,10 @@ $(".nav-link").click( function(){
     $(".header-navigation").removeClass("nav-show");
 });
 
+$(window).scroll(function() {
+    $(".header-navigation").removeClass("nav-show");
+});
+
 // add google map
 function myMap() {
     var mapProp= {

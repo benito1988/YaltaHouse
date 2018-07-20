@@ -198,12 +198,7 @@
     }
 
     .text {
-        overflow: hidden;
         color: $gray;
-
-        @media all and (min-width: $bp-small) {   
-            height: 94px;
-        }
     }
 }
 
@@ -271,7 +266,7 @@
     position: relative;
 
     @media all and (min-width: $bp-small) {   
-        height: 100vh;
+        height: 760px;
         min-height: 600px;
     }
 
