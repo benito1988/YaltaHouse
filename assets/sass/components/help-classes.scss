@@ -33,7 +33,7 @@ nav, header, footer, main, aside{
   margin-bottom: 40px;
 }
 
-//button
+//btn
 
 .btn {
   padding: 10px 26px;
@@ -42,6 +42,7 @@ nav, header, footer, main, aside{
   border: none;
   outline: none;
   cursor: pointer;
+  transition: all $transition ease-out;
 
   &:hover {
     background-color: darken($blue,5%);

@@ -7,6 +7,32 @@
     height: 20px;
 }
 
+i[class^="i-"] {
+	width: 44px;
+    height: 44px;
+    display: inline-block;
+}
+
+.i-marker-blue {
+    background: url(../img/markerBlue.svg) no-repeat center;
+    background-size: contain;
+}
+
+.i-map-marker-blue{
+    background: url(../img/mapMark.svg) no-repeat center;
+    background-size: contain;
+}
+
+.i-phone-blue {
+    background: url(../img/phoneBlue.svg) no-repeat center;
+    background-size: contain;
+}
+
+.i-mail-blue {
+    background: url(../img/mailBlue.svg) no-repeat center;
+    background-size: contain;
+}
+
 .i-email-w {
     background-image: url(../img/email-w.svg);}
 

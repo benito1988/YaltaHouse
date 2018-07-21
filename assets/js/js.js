@@ -1,10 +1,12 @@
 // open modal card
 $(".open-modal").click(function(){
     $(".modal-window").addClass("show");
+    $('html, body').addClass('overflowHidden');
 });
 
 $(".close-modal").click( function(){
     $(".modal-window").removeClass("show");
+    $( 'html, body' ).removeClass( 'overflowHidden' );
 });
 
 // open & close mobile menu

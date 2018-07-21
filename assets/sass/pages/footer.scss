@@ -21,9 +21,9 @@
         }
     }
 
-    .list-item a{
+    .list-item .link{
         color: $black;
-        font-weight: 500;
+        font-weight: 600;
     }
 
     .list-item {
@@ -38,7 +38,7 @@
             margin-bottom: 15px;
         }
 
-        & > a {
+        & > .link {
             font-weight: 400;
             color: #fff;
 
