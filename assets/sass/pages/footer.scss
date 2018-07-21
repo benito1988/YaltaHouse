@@ -61,3 +61,18 @@
     color: $black;
 }
 
+.footer .i-vk-b {
+    background-image: url(../img/vk-w.svg);
+    
+    @media all and (min-width: $bp-small) {
+        background-image: url(../img/vk-b.svg);
+    }
+}
+
+.footer .i-facebook-b {
+    background-image: url(../img/facebook-w.svg);
+    
+    @media all and (min-width: $bp-small) {
+        background-image: url(../img/facebook-b.svg);
+    }
+}
