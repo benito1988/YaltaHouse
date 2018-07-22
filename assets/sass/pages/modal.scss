@@ -55,7 +55,7 @@
     padding: 0;
     height: 0vh;
     overflow: hidden;
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(0,0,0,0.8);
     opacity: 0;
     transition: opacity 0.2s;
 
@@ -66,10 +66,9 @@
         opacity: 1;
 
         @media all and (min-width:$bp-small) {
-            padding: 20px;
+            padding: 30px;
         }
     }
-
 }
 
 .service-text {
@@ -81,9 +80,8 @@
 .modal-card {
     position: relative;
     width: 100%;
-    height: 100%;
+    // height: 100%;
     max-width: 960px;
-    margin: 0 auto 20px;
     background-color: #fff;
     box-shadow: $shadow;
     transition: transform 0.4s;
@@ -98,9 +96,9 @@
     .show & {
         transform: translateY(0px);
     } 
-
+    
     @media all and (min-width: $bp-small) {
-        // padding: 50px 50px 0;
+        margin: 0 auto 30px;
         height: auto;
         flex-direction: row;
     }
@@ -116,7 +114,7 @@
     margin-right: -30px;
     margin-bottom: -30px;
     padding: 30px;
-    background-color: lighten($light-gray, 2%);
+    background-color: lighten($light-gray, 1%);
 }
 
 .modal-card .room-description {
@@ -128,6 +126,8 @@
     justify-content: flex-start;
     
     @media all and (min-width: $bp-small) {   
+        box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        z-index: 1;
         width: 60%;
     }
 }
@@ -139,7 +139,7 @@
     display: flex;
     align-items: stretch;
     flex-direction: column;
-    justify-content: inherit;
+    justify-content: space-between;
 
     @media all and (min-width: $bp-small) {   
         width: 40%;
@@ -147,6 +147,7 @@
 }
 
 .room-settings {
+    width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -156,6 +157,11 @@
 
     @media all and (min-width: $bp-small) {   
         flex-direction: row;
+    }
+
+    .title {
+        font-size: 26px;
+        margin-bottom: 20px;
     }
 }
 
@@ -167,10 +173,6 @@
     justify-content: flex-start;
     padding: 10px 0;
     border-bottom: 1px solid $light-gray;
-    
-    // &:last-child {
-    //     border-bottom: 1px solid $light-gray;
-    // }
 
     .icon {
         margin-right: 10px;
@@ -228,34 +230,57 @@
     }
 }
 
-.input-prepend-append {
-    font-size: 0;
+.dropdown {
+    padding: 8px 10px;
+    border: 1px solid $light-gray;
+    font-size: 14px;
+    overflow: visible;
+    display: inline-block;
+    color: $black;
+    width: 100%;
+    transition: 0.3s;
+    text-align: left;
+    width: 80px;
+    position: relative;
+    background-color: transparent;
+    z-index: 2;
 
-    .btn {
-        background-color: #fff;
-        color: $blue;
-        border: 1px solid $light-gray;
-        margin: 0;
-        padding: 10px 15px;
-    }    
+    -moz-appearance: none;
+    text-indent: 0.01px; 
+    text-overflow: '';
+    -ms-appearance: none;
+    appearance: none!important;
 
-    .feald {
-        width: 40px;
-        padding: 10px;
-        margin: 0 -1px;
-        text-align: center;
+    &::-ms-expand {
+        display: none;
     }
+}
+
+.select-wrapper {
+    position: relative;
+    margin-right: 20px;
+    background-color: #fff;
+
+    &:after {
+        content: "";
+        z-index: 1;
+        position: absolute;
+        top: 16px;
+        right: 10px;
+        border: 4px solid transparent;
+        border-top: 4px solid $blue;
+    }
+}
+
+.input-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 }
 
 .description-left-side {
     flex: 0 1 100%;
-    // margin-bottom: 20px;
     padding: 0 30px 40px;
-    
-    @media all and (min-width: $bp-small) {   
-        // margin-bottom: 0px;
-        // padding-right: 30px;
-    }
 
     .title {
         font-size: 26px;
@@ -290,7 +315,6 @@
             height: 100%;
         }
     }
-
 }
 .slider-preview-picture {
     width: 90%;
@@ -322,39 +346,29 @@
 
 .price-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
-    align-items: center;
+    align-items: flex-end;
     justify-content: flex-start;
-    padding-bottom: 20px;
+    padding-bottom: 14px;
 
     @media all and (min-width: $bp-small) {   
         margin-bottom: 0;
     }
-
-    .final-price {
-        border-right: 1px solid lighten($gray, 10%);
-        padding-right: 10px;
-        text-align: left;
-    }
-
-    .small-title {
-        font-weight: 400;
-        font-size: 12px;
-        margin-bottom: 0px;
+    
+    .price {
+        line-height: 1;
+        font-weight: 600;
+        color: $black;
+        font-size: 30px;
+        letter-spacing: 2px;
     }
 
     .days {
-        font-size: 14px;
-        font-weight: 600;
-        color: $green;
-    }
-
-    .price {
-        padding: 0 0 0 10px;
-        font-weight: 600;
-        color: lighten($blue,10%);
-        font-size: 34px;
+        font-size: 12px;
+        font-weight: 400;
+        color: $black;
+        text-transform: uppercase;
     }
 }
 
@@ -372,10 +386,6 @@
 }
 
 .slick-prev  {
-    background-image: url(../img/arrow.svg) !important;
-    background-size: 20px !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
     width: 40px !important;
     height: 100% !important;
     left: 0 !important;
@@ -383,7 +393,9 @@
     top: 0 !important;
     right: auto !important;
     z-index: 2;
-    transform: translate(0,0) !important;
+    background: rgba(0,0,0,0.4) url(../img/right-arrow.svg) no-repeat center !important;
+    background-size: 16px !important;
+    transform: scaleX(-1) !important;
 }
 
 .slick-next  {
@@ -393,9 +405,14 @@
     right: 0 !important;
     left: auto !important;
     top: 0 !important;
-    background-image: url(../img/arrow.svg) !important;
-    background-size: 20px !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    transform: scaleX(-1) !important;
+    transform: translate(0,0) !important;
+    background: rgba(0,0,0,0.4) url(../img/right-arrow.svg) no-repeat center !important;
+    background-size: 16px !important;
+}
+
+.slick-dots li button {
+
+}
+.slick-dots li button::before {
+    font-size: 10px !important;
 }
