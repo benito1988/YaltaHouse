@@ -1,7 +1,7 @@
 .footer {
     padding: 40px 0;
     background-size: cover;
-    background-color: darken($black,20%);
+    background-color: #1b1b40;
     
     @media all and (min-width: $bp-small) {
         background: url(../img/footer-bg-picture.jpg) no-repeat center;
@@ -13,17 +13,12 @@
         text-align: left;
         color: #fff;
         font-size: 22px;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
         display: inline-block;
 
         @media all and (min-width: $bp-small) {
             color: $black;
         }
-    }
-
-    .list-item .link{
-        color: $black;
-        font-weight: 600;
     }
 
     .list-item {
@@ -39,7 +34,8 @@
         }
 
         & > .link {
-            font-weight: 400;
+            font-size: 15px;
+            font-weight: 600;
             color: #fff;
 
             @media all and (min-width: $bp-small) {
@@ -58,7 +54,11 @@
 }
 
 .copiright {
-    color: $black;
+    color: #fff;
+
+    @media all and (min-width: $bp-small) {
+        color: $black;
+    }
 }
 
 .footer .i-vk-b {

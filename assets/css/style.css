@@ -68,9 +68,9 @@ nav, header, footer, main, aside {
   display: inline-block;
   background-size: contain;
   background-position: center;
-  background-repeat: no-repeat;
   width: 20px;
-  height: 20px; }
+  height: 20px;
+  background-repeat: no-repeat; }
 
 i[class^="i-"] {
   width: 44px;
@@ -189,6 +189,26 @@ i[class^="i-"] {
 .i-calendar-g {
   background-image: url(../img/calendar-g.svg); }
 
+.i-wave {
+  position: relative; }
+  .i-wave:after {
+    content: "";
+    position: absolute;
+    background-image: url(../img/wave.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 25px;
+    bottom: -23px;
+    left: 0; }
+    @media all and (min-width: 767px) {
+      .i-wave:after {
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%); } }
+
 html {
   font-size: 16px; }
 
@@ -211,16 +231,16 @@ body {
 
 .title-section {
   font-size: 34px;
-  margin-bottom: 20px; }
+  margin-bottom: 60px; }
   @media all and (min-width: 767px) {
     .title-section {
       margin-bottom: 100px;
       text-align: center; } }
 
 .text {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 1.5; }
+  line-height: 1.7; }
 
 .small-text {
   font-size: 12px;
@@ -246,12 +266,12 @@ body {
       padding-top: 60px; } }
 
 .nearby {
-  padding-top: 20px;
-  padding-bottom: 40px; }
+  padding-top: 60px;
+  padding-bottom: 10px; }
   @media all and (min-width: 767px) {
     .nearby {
       padding-top: 60px;
-      padding-bottom: 120px; } }
+      padding-bottom: 180px; } }
 
 .rooms, .convenience, .about-us {
   padding-top: 20px;
@@ -348,22 +368,29 @@ body {
     -ms-flex-align: center;
     align-items: center;
     float: left;
-    margin-left: 10px;
+    margin-left: 24px;
     font-size: 12px;
-    text-align: right; }
+    text-align: right;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    opacity: 1; }
+    .contacts .contact-link:hover {
+      opacity: 0.6; }
     .contacts .contact-link .icon {
       height: 12px;
       width: 12px;
-      margin-right: 5px; }
+      margin-right: 8px; }
     .contacts .contact-link .i-facebook-w, .contacts .contact-link .i-vk-w {
       width: 20px;
-      height: 20px; }
+      height: 20px;
+      margin-right: 0; }
 
 .nav {
   max-height: 0px;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
   overflow: hidden; }
   @media all and (min-width: 767px) {
     .nav {
@@ -466,7 +493,7 @@ body {
   .nav-show .menu {
     height: 26px; }
   .menu .menu-line {
-    height: 2px;
+    height: 1px;
     width: 100%;
     background-color: #009beb;
     -webkit-transition: width 0.2s;
@@ -527,7 +554,7 @@ body {
       box-shadow: none; } }
   @media all and (max-width: 767px) {
     .header-navigation.nav-show .nav {
-      max-height: 1000px; } }
+      max-height: 100vh; } }
 
 @media all and (min-width: 767px) {
   .fixed .header-navigation {
@@ -554,7 +581,7 @@ body {
         justify-content: flex-end;
         border-bottom: none; }
     .fixed .header-navigation .nav-item {
-      padding: 0 10px; }
+      padding: 0 20px; }
       .fixed .header-navigation .nav-item:last-child {
         padding-right: 0; }
     .fixed .header-navigation .nav-link {
@@ -669,7 +696,7 @@ body {
         .room-card:hover .room-photo img {
           opacity: 0.8; } }
   .room-card .room-photo {
-    height: 120px;
+    height: 190px;
     background-color: #009beb;
     display: inline-block;
     width: 100%; }
@@ -682,7 +709,7 @@ body {
       -o-transition: all 0.3s;
       transition: all 0.3s; }
   .room-card .room-description {
-    padding: 14px;
+    padding: 14px 14px 24px;
     border: 1px solid #EDEFF2; }
   .room-card .small-title {
     font-size: 18px;
@@ -691,32 +718,47 @@ body {
     font-size: 12px;
     line-height: 1.6;
     overflow: hidden;
-    height: 60px;
+    height: 40px;
     margin-bottom: 10px;
-    color: #858B91; }
+    color: #9ca5af; }
   .room-card .price {
-    font-size: 26px;
-    color: #34cc7c; }
+    font-size: 20px;
+    color: #34cc7c;
+    font-weight: 400;
+    opacity: 1;
+    margin-bottom: 10px;
+    display: inline-block;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
     @media all and (min-width: 767px) {
       .room-card .price {
-        color: #3C4045; } }
+        margin-bottom: 0; } }
     .room-card .price .currency {
-      font-size: 16px;
+      color: #3C4045;
+      font-size: 14px;
       margin-right: 3px; }
   .room-card .btn {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    opacity: 1; }
+    width: 100%;
+    opacity: 1;
+    bottom: 19px;
+    right: 0px; }
     @media all and (min-width: 767px) {
       .room-card .btn {
+        width: 165px;
+        position: absolute;
         opacity: 0;
-        bottom: -10px;
+        bottom: 15px;
         right: 0px; } }
   @media all and (min-width: 767px) {
     .room-card:hover .btn {
       opacity: 1;
-      right: 20px; } }
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+      left: 50%; }
+    .room-card:hover .price {
+      opacity: 0; } }
 
 .convenience {
   background-image: url(../img/circle-gradient-top.svg), url(../img/bg-wave-left.svg), url(../img/bg-wave-right.svg);
@@ -730,7 +772,7 @@ body {
   background-repeat: no-repeat;
   background-size: 500px, 200px; }
   .nearby .distace {
-    color: #bbbec1;
+    color: #d4d8dd;
     float: right;
     line-height: 1.6; }
   .nearby .list-item {
@@ -771,7 +813,7 @@ body {
   .card-section .title {
     margin-bottom: 20px; }
   .card-section .text {
-    color: #858B91; }
+    color: #9ca5af; }
 
 @media all and (min-width: 767px) {
   .card-left {
@@ -833,23 +875,24 @@ body {
   position: relative; }
   @media all and (min-width: 767px) {
     .contact-us {
-      height: 760px;
-      min-height: 600px; } }
+      height: 400px; } }
   .contact-us .card-contacts {
-    z-index: 1;
     padding: 40px 0;
-    background-color: #fff; }
+    background-color: #fff;
+    border-top: 1px solid #EDEFF2; }
     @media all and (min-width: 767px) {
       .contact-us .card-contacts {
+        border-top: none;
+        z-index: 1;
         -webkit-box-shadow: 2.2px 4.5px 4.6px 0.4px rgba(0, 0, 0, 0.06), 5.7px 11.7px 32.2px 2.8px rgba(0, 0, 0, 0.08);
         box-shadow: 2.2px 4.5px 4.6px 0.4px rgba(0, 0, 0, 0.06), 5.7px 11.7px 32.2px 2.8px rgba(0, 0, 0, 0.08);
-        width: 420px;
+        width: 388px;
         position: absolute;
-        top: 50%;
+        top: 33%;
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
-        padding: 90px 60px; } }
+        padding: 80px 50px; } }
     .contact-us .card-contacts .icon {
       width: 16px;
       height: 16px;
@@ -862,10 +905,10 @@ body {
           .contact-us .card-contacts .icon-large {
             margin-bottom: 20px; } }
     .contact-us .card-contacts .title {
-      margin-bottom: 12px; }
+      margin-bottom: 15px; }
       @media all and (min-width: 767px) {
         .contact-us .card-contacts .title {
-          margin-bottom: 60px; } }
+          margin-bottom: 20px; } }
     .contact-us .card-contacts .text {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -873,18 +916,18 @@ body {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      margin-bottom: 10px;
+      margin-bottom: 14px;
       color: #3C4045;
       font-size: 14px; }
       @media all and (min-width: 767px) {
         .contact-us .card-contacts .text {
-          margin-bottom: 30px; } }
+          margin-bottom: 22px; } }
       .contact-us .card-contacts .text.link {
         text-decoration: underline;
         font-weight: 600; }
   .contact-us .map-container {
     background-color: lightgray;
-    height: 200px; }
+    height: 300px; }
     @media all and (min-width: 767px) {
       .contact-us .map-container {
         position: absolute;
@@ -897,7 +940,7 @@ body {
 .footer {
   padding: 40px 0;
   background-size: cover;
-  background-color: #0d0d0e; }
+  background-color: #1b1b40; }
   @media all and (min-width: 767px) {
     .footer {
       background: url(../img/footer-bg-picture.jpg) no-repeat center;
@@ -907,14 +950,11 @@ body {
     text-align: left;
     color: #fff;
     font-size: 22px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     display: inline-block; }
     @media all and (min-width: 767px) {
       .footer .logo {
         color: #3C4045; } }
-  .footer .list-item .link {
-    color: #3C4045;
-    font-weight: 600; }
   .footer .list-item {
     color: #fff; }
     @media all and (min-width: 767px) {
@@ -924,7 +964,8 @@ body {
       font-size: 12px;
       margin-bottom: 15px; }
     .footer .list-item > .link {
-      font-weight: 400;
+      font-size: 15px;
+      font-weight: 600;
       color: #fff; }
       @media all and (min-width: 767px) {
         .footer .list-item > .link {
@@ -937,7 +978,22 @@ body {
       margin-bottom: 80px; } }
 
 .copiright {
-  color: #3C4045; }
+  color: #fff; }
+  @media all and (min-width: 767px) {
+    .copiright {
+      color: #3C4045; } }
+
+.footer .i-vk-b {
+  background-image: url(../img/vk-w.svg); }
+  @media all and (min-width: 767px) {
+    .footer .i-vk-b {
+      background-image: url(../img/vk-b.svg); } }
+
+.footer .i-facebook-b {
+  background-image: url(../img/facebook-w.svg); }
+  @media all and (min-width: 767px) {
+    .footer .i-facebook-b {
+      background-image: url(../img/facebook-b.svg); } }
 
 .overflowHidden {
   overflow: hidden !important; }
@@ -1004,9 +1060,9 @@ body {
         padding: 20px; } }
 
 .service-text {
-  color: #858B91;
+  color: #3C4045;
   font-size: 14px;
-  font-weight: 400; }
+  font-weight: 500; }
 
 .modal-card {
   position: relative;
@@ -1133,9 +1189,7 @@ body {
   -ms-flex-pack: start;
   justify-content: flex-start;
   padding: 10px 0;
-  border-top: 1px solid #EDEFF2; }
-  .service-item:last-child {
-    border-bottom: 1px solid #EDEFF2; }
+  border-bottom: 1px solid #EDEFF2; }
   .service-item .icon {
     margin-right: 10px;
     background-position: left;
@@ -1160,13 +1214,13 @@ body {
   color: #3C4045;
   width: 200px; }
   .feald::-webkit-input-placeholder {
-    color: #858B91; }
+    color: #9ca5af; }
   .feald::-moz-placeholder {
-    color: #858B91; }
+    color: #9ca5af; }
   .feald:-ms-input-placeholder {
-    color: #858B91; }
+    color: #9ca5af; }
   .feald:-moz-placeholder {
-    color: #858B91; }
+    color: #9ca5af; }
   .feald.i-email-g, .feald.i-phone-g, .feald.i-calendar-g {
     background-size: 20px;
     background-position: 12px center;
@@ -1199,7 +1253,7 @@ body {
   .input-group-date .feald {
     width: 160px; }
   .input-group-date .line {
-    color: #858B91;
+    color: #9ca5af;
     margin-right: 10px;
     padding-top: 14px; }
 
@@ -1216,18 +1270,16 @@ body {
       flex: 0 1 50%;
       padding-right: 30px; } }
   .description-left-side .title {
-    font-size: 24px;
+    font-size: 26px;
     margin-bottom: 14px; }
   .description-left-side .text {
-    font-size: 12px;
     margin-bottom: 15px; }
 
 .description-right-side {
   -webkit-box-flex: 0;
   -ms-flex: 0 1 100%;
   flex: 0 1 100%;
-  width: 100%;
-  overflow: hidden; }
+  width: 50%; }
   @media all and (min-width: 767px) {
     .description-right-side {
       -webkit-box-flex: 0;
@@ -1294,3 +1346,29 @@ body {
     font-weight: 600;
     color: #34cc7c;
     font-size: 34px; }
+
+.slick-arrow {
+  top: 120% !important; }
+  .slick-arrow::before {
+    content: none !important; }
+
+.slick-prev {
+  background-image: url(../img/arrow.svg) !important;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat !important;
+  width: 40px !important;
+  height: 25px !important;
+  left: 0 !important; }
+
+.slick-next {
+  right: 0 !important;
+  background-image: url(../img/arrow.svg) !important;
+  background-size: contain !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  width: 40px !important;
+  height: 25px !important;
+  -webkit-transform: scaleX(-1) !important;
+  -ms-transform: scaleX(-1) !important;
+  transform: scaleX(-1) !important; }

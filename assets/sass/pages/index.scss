@@ -18,12 +18,12 @@ body {
 }
 
 .nearby {
-	padding-top: 20px;
-	padding-bottom: 40px;
+	padding-top: 60px;
+	padding-bottom: 10px;
 
 	@media all and (min-width: $bp-small) {
 		padding-top: 60px;
-		padding-bottom: 120px;
+		padding-bottom: 180px;
 	}
 }
 

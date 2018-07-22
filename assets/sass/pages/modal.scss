@@ -67,9 +67,9 @@
 }
 
 .service-text {
-    color: $gray;
+    color: $black;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .modal-card {
@@ -147,11 +147,11 @@
     align-items: flex-start;
     justify-content: flex-start;
     padding: 10px 0;
-    border-top: 1px solid $light-gray;
+    border-bottom: 1px solid $light-gray;
     
-    &:last-child {
-        border-bottom: 1px solid $light-gray;
-    }
+    // &:last-child {
+    //     border-bottom: 1px solid $light-gray;
+    // }
 
     .icon {
         margin-right: 10px;
@@ -248,20 +248,18 @@
     }
 
     .title {
-        font-size: 24px;
+        font-size: 26px;
         margin-bottom: 14px;
     }
 
     .text {
-        font-size: 12px;
         margin-bottom: 15px;
     }
 }
 
 .description-right-side {
     flex: 0 1 100%;
-    width: 100%;
-    overflow: hidden;
+    width: 50%;
     
     @media all and (min-width: $bp-small) {   
         flex: 0 1 50%;
@@ -337,4 +335,33 @@
         color: $green;
         font-size: 34px;
     }
+}
+
+.slick-arrow {
+    top: 120% !important;
+
+    &::before {
+        content: none !important;
+    }
+}
+
+.slick-prev  {
+    background-image: url(../img/arrow.svg) !important;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat !important;
+    width: 40px !important;
+    height: 25px !important;
+    left: 0 !important;
+}
+
+.slick-next  {
+    right: 0 !important;
+    background-image: url(../img/arrow.svg) !important;
+    background-size: contain !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    width: 40px !important;
+    height: 25px !important;
+    transform: scaleX(-1) !important;
 }
