@@ -135,7 +135,7 @@
     padding: 0;
 
     @media all and (min-width: $bp-small) {
-        padding: 0 20px;
+        padding: 0 16px;
     }
   }
 
@@ -290,6 +290,7 @@
 
             .logo {
                 font-size: 20px;
+                padding-top: 10px;
                 color: $black;
             }
         
@@ -310,7 +311,7 @@
         }
 
         .nav-item {
-            padding: 0 20px;
+            padding: 0 16px;
 
             &:last-child {
                 padding-right: 0;

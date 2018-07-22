@@ -14,6 +14,12 @@
     top: 10px;
     z-index: 999;
     cursor: pointer;
+    opacity: 0.6;
+    transition: $transition; 
+
+    &:hover {
+        opacity: 1;
+    }
 
     &::before {
         content: "";
@@ -77,53 +83,66 @@
     width: 100%;
     height: 100%;
     max-width: 960px;
-    margin: 0 auto;
+    margin: 0 auto 20px;
     background-color: #fff;
     box-shadow: $shadow;
     transition: transform 0.4s;
     transform: translateY(-200px);
     overflow: auto;
-    padding: 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
     
     .show & {
         transform: translateY(0px);
     } 
 
     @media all and (min-width: $bp-small) {
-        padding: 50px 50px 0;
+        // padding: 50px 50px 0;
         height: auto;
+        flex-direction: row;
     }
 }
 
 .room-order {
-    padding: 20px 0;
-    border-top: 1px solid $light-gray;
-    background-color: #fbfbfb;
-    margin: 0 -20px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: flex-end;
-    justify-content: flex-end;
-
-    @media all and (min-width: $bp-small) {
-        padding: 50px;
-        margin: 0 -50px;
-        flex-direction: row;
-        align-items: center;
-    }
+    justify-content: flex-start;
+    margin-left: -30px;
+    margin-right: -30px;
+    margin-bottom: -30px;
+    padding: 30px;
+    background-color: lighten($light-gray, 2%);
 }
 
 .modal-card .room-description {
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: flex-start;
-    margin-bottom: 40px;
     
     @media all and (min-width: $bp-small) {   
-        flex-direction: row;
+        width: 60%;
+    }
+}
+
+.form {
+    width: 100%;
+    padding: 30px;
+    background-color: #fbfbfb;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: inherit;
+
+    @media all and (min-width: $bp-small) {   
+        width: 40%;
     }
 }
 
@@ -133,7 +152,7 @@
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: flex-start;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 
     @media all and (min-width: $bp-small) {   
         flex-direction: row;
@@ -164,13 +183,15 @@
 }
 
 .input-wrapper {
-    margin: 0 10px 10px 0;
+    margin: 0 0 16px 0;
+    width: 100%;
 }
 
 .input-title {
     font-weight: 400;
-    margin-bottom: 10px;
-    font-size: 14px;
+    margin-bottom: 6px;
+    font-size: 12px;
+    text-transform: uppercase;
 }
 
 .feald {
@@ -180,7 +201,12 @@
     overflow: visible;
     display: inline-block;
     color: $black;
-    width: 200px;
+    width: 100%;
+    transition: $transition; 
+
+    &:focus {
+        border-color: $blue;
+    }
 
     &::-webkit-input-placeholder {
         color: $gray;
@@ -221,30 +247,14 @@
     }
 }
 
-.input-group-date {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-    .feald {
-        width: 160px;
-    }
-
-    .line {
-        color: $gray;
-        margin-right: 10px;
-        padding-top: 14px;
-    }
-}
-
 .description-left-side {
     flex: 0 1 100%;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
+    padding: 0 30px 40px;
     
     @media all and (min-width: $bp-small) {   
-        margin-bottom: 0px;
-        flex: 0 1 50%;
-        padding-right: 30px;
+        // margin-bottom: 0px;
+        // padding-right: 30px;
     }
 
     .title {
@@ -259,10 +269,12 @@
 
 .description-right-side {
     flex: 0 1 100%;
-    width: 50%;
+    width: 100%;
+    overflow: hidden;
+    padding: 58px 30px 0;
     
     @media all and (min-width: $bp-small) {   
-        flex: 0 1 50%;
+        padding: 0;
     }
 }
 
@@ -300,45 +312,59 @@
     }
 }
 
+.button-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
 .price-container {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
-    justify-content: flex-end;
-    margin-bottom: 20px;
+    justify-content: flex-start;
+    padding-bottom: 20px;
 
     @media all and (min-width: $bp-small) {   
         margin-bottom: 0;
     }
 
     .final-price {
-        border-right: 1px solid $light-gray;
+        border-right: 1px solid lighten($gray, 10%);
         padding-right: 10px;
         text-align: left;
     }
 
     .small-title {
         font-weight: 400;
-        font-size: 14px;
-        margin-bottom: 6px;
+        font-size: 12px;
+        margin-bottom: 0px;
     }
 
     .days {
         font-size: 14px;
         font-weight: 600;
+        color: $green;
     }
 
     .price {
-        padding: 0 20px 0 10px;
+        padding: 0 0 0 10px;
         font-weight: 600;
-        color: $green;
+        color: lighten($blue,10%);
         font-size: 34px;
     }
 }
 
 .slick-arrow {
-    top: 120% !important;
+    opacity: 0.6;
+    transition: $transition; 
+
+    &:hover {
+        opacity: 1
+    }
 
     &::before {
         content: none !important;
@@ -347,21 +373,29 @@
 
 .slick-prev  {
     background-image: url(../img/arrow.svg) !important;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat !important;
-    width: 40px !important;
-    height: 25px !important;
-    left: 0 !important;
-}
-
-.slick-next  {
-    right: 0 !important;
-    background-image: url(../img/arrow.svg) !important;
-    background-size: contain !important;
+    background-size: 20px !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
     width: 40px !important;
-    height: 25px !important;
+    height: 100% !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    top: 0 !important;
+    right: auto !important;
+    z-index: 2;
+    transform: translate(0,0) !important;
+}
+
+.slick-next  {
+    height: 100% !important;
+    width: 40px !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    left: auto !important;
+    top: 0 !important;
+    background-image: url(../img/arrow.svg) !important;
+    background-size: 20px !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
     transform: scaleX(-1) !important;
 }
