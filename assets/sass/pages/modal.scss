@@ -80,7 +80,6 @@
 .modal-card {
     position: relative;
     width: 100%;
-    // height: 100%;
     max-width: 960px;
     background-color: #fff;
     box-shadow: $shadow;
@@ -101,6 +100,30 @@
         margin: 0 auto 30px;
         height: auto;
         flex-direction: row;
+    }
+}
+
+.modal-card.succes-card, .modal-card.error-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    max-width: 700px;
+    width: auto !important;
+    text-align: center;
+
+    .check-icon {
+        width: 100px;
+        margin-bottom: 12px;
+    }
+
+    .title {
+        margin-bottom: 15px;
+    }
+
+    .text {
+        margin-bottom: 22px;
+        font-size: 16px;
     }
 }
 

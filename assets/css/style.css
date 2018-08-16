@@ -1138,6 +1138,30 @@ body {
       -ms-flex-direction: row;
       flex-direction: row; } }
 
+.modal-card.succes-card, .modal-card.error-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 40px;
+  max-width: 700px;
+  width: auto !important;
+  text-align: center; }
+  .modal-card.succes-card .check-icon, .modal-card.error-card .check-icon {
+    width: 100px;
+    margin-bottom: 12px; }
+  .modal-card.succes-card .title, .modal-card.error-card .title {
+    margin-bottom: 15px; }
+  .modal-card.succes-card .text, .modal-card.error-card .text {
+    margin-bottom: 22px;
+    font-size: 16px; }
+
 .room-order {
   display: -webkit-box;
   display: -ms-flexbox;
