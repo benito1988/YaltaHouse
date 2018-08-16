@@ -187,6 +187,17 @@
 .input-wrapper {
     margin: 0 0 16px 0;
     width: 100%;
+
+    &.error{
+
+        .feald {
+            border: 1px solid $red;
+        }
+
+        .input-title {
+            color: $red;
+        }
+    }
 }
 
 .input-title {
@@ -223,7 +234,7 @@
         color: $gray;
     }
 
-    &.i-email-g, &.i-phone-g, &.i-calendar-g {
+    &.i-email-g, &.i-phone-g, &.i-calendar-g, &.i-person-g {
         background-size: 20px;
         background-position: 12px center;
         background-repeat: no-repeat;
